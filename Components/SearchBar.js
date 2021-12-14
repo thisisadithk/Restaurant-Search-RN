@@ -6,8 +6,6 @@ Axios is a separate library for making requests. Easy to use, sensible defaults 
 */
 
 
-
-
 import React from 'react';
 import {View, TextInput, StyleSheet, Text} from 'react-native';
 import {Feather} from '@expo/vector-icons';
@@ -16,7 +14,7 @@ export const SearchBar = ({term, onTermChange, onTermSubmit}) => {
     return (
         <View style={styles.backgroundStyle}>
             <Feather name="search" style={styles.iconStyle} />
-            <TextInput autoCapitalize="none" autoCorrect={false} value={term} onChangeText={onTermChange} style={styles.inputStyle} placeholder="Search" onEndEditing={() => onTermSubmit}/>
+            <TextInput autoCapitalize="none" autoCorrect={false} value={term} onChangeText={onTermChange} style={styles.inputStyle} placeholder="Search" onEndEditing={onTermSubmit}/>
         </View>
     )
 }

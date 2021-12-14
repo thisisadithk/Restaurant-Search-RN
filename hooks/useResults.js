@@ -11,19 +11,19 @@ export default () => {
                 params : {
                     limit : 50,
                     term : searchTerm,
-                    location : 'san jose'
+                    location : 'new york'
                 }
             });
-            setResults(response.data.businesses)
+            setResults(response.data.businesses);
         }
-        catch{
-            setError("Something went wrong");
+        catch(e){
+            alert(e.message);
         }
     } 
      
     useEffect(() => {
-        searchApi("burger");
+        searchApi("ice cream");
     }, [])
      
-    return [searchApi, results, error]
+    return [searchApi, results, error];
 }
